@@ -1,0 +1,45 @@
+descriptors:
+  cmd-desc:
+    soap1:
+      acronym: atomic-to-global-upcjuw
+      atomic_descriptor:
+        soap1:
+          acronym: SOAP-n8-l4-c4.0-g0.41
+          atom_gaussian_width: 0.41
+          crossover: false
+          cutoff: 4.0
+          l: 4
+          n: 8
+          periodic: true
+          rbf: gto
+          species: &id001
+          - 1
+          - 8
+          type: SOAP
+      kernel_function: &id002
+        kernel:
+          acronym: ''
+          element_wise: false
+          kernel_type: average
+          species: *id001
+      max_atoms: 192
+      periodic: true
+      species: *id001
+    soap2:
+      acronym: atomic-to-global-qdipwe
+      atomic_descriptor:
+        soap2:
+          acronym: SOAP-n8-l4-c2.0-g0.21
+          atom_gaussian_width: 0.21
+          crossover: false
+          cutoff: 2.0
+          l: 4
+          n: 8
+          periodic: true
+          rbf: gto
+          species: *id001
+          type: SOAP
+      kernel_function: *id002
+      max_atoms: 192
+      periodic: true
+      species: *id001

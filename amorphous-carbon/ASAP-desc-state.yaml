@@ -1,0 +1,26 @@
+descriptors:
+  cmd-desc:
+    soap1:
+      acronym: atomic-to-global-wcqpsv
+      atomic_descriptor:
+        soap1:
+          acronym: SOAP-n8-l8-c2.0-g0.2
+          atom_gaussian_width: 0.2
+          crossover: false
+          cutoff: 2.0
+          l: 8
+          n: 8
+          periodic: true
+          rbf: gto
+          species: &id001
+          - 6
+          type: SOAP
+      kernel_function:
+        kernel:
+          acronym: ''
+          element_wise: false
+          kernel_type: average
+          species: *id001
+      max_atoms: 125
+      periodic: true
+      species: *id001

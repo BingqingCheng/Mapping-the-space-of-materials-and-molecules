@@ -1,0 +1,12 @@
+asap gen_desc -f all_taC_slabs_125at_withbond.xyz soap -c 2.0 -n 8 -l 8 -g 0.2 -pa
+
+asap map -f ASAP-desc.xyz -dm '[SOAP-n8-l8-c2.0-g0.2]' -c n_neighb -p 'n_neighb' -clab 'number of neighbors' -ar 1.2 -ua -s journal skpca -k polynomial -kp 2 --no-scale
+
+asap map -f ASAP-desc.xyz -o matrix -dm '[SOAP-n8-l8-c2.0-g0.2]' -c avg_bond -p 'avg_bond' -clab 'average bond length [$\AA$]' -ar 1.2 -ua -s journal skpca -k polynomial -kp 2 --no-scale
+
+asap kde -f ASAP-desc.xyz -dm '[SOAP-n8-l8-c2.0-g0.2]' -ua kde_internal -d 8  plot_pca
+
+asap map -f ASAP-desc.xyz -dm '[SOAP-n8-l8-c2.0-g0.2]' -c ASAP-kde.dat -ccol 1 -c0 -p 'kde' -clab 'log(density of samples)' -ar 1.2 -ua -s journal skpca -k polynomial -kp 2 --no-scale
+
+asap cluster -f ASAP-desc.xyz -dm '[SOAP-n8-l8-c2.0-g0.2]' -ua fdb plot_pca
+

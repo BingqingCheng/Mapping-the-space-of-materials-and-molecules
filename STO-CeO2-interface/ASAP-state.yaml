@@ -1,0 +1,30 @@
+ASAP:
+  soap1:
+    acronym: atomic-to-global-qtyide
+    atomic_descriptor:
+      soap1:
+        acronym: SOAP-n4-l3-c4.6-g0.58
+        atom_gaussian_width: 0.58
+        crossover: false
+        cutoff: 4.6
+        l: 3
+        n: 4
+        periodic: true
+        rbf: gto
+        species: &id001
+        - 8
+        - 22
+        - 38
+        - 58
+        type: SOAP
+    kernel_function:
+      kernel:
+        acronym: -e
+        element_wise: true
+        kernel_type: average
+        species: *id001
+    max_atoms: 462
+    periodic: true
+    species: *id001
+data:
+  fxyz: asap_titerm_b4_export.xyz
