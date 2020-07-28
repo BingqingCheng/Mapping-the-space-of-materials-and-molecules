@@ -4,6 +4,6 @@ from ase.io import write
 
 ''' Converts raw QM9 xyz files to a combined extended xyz file used by ASAP and projection_viewer '''
 
-if __name__='__main__':
+if __name__=='__main__':
     atoms = read_qm9_database('QM9_raw')
     write('atoms_qm9.xyz',atoms)
